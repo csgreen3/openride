@@ -34,10 +34,11 @@
   <h1 id="who">You've been challenged</h1>
   <p class="what" id="what">&nbsp;</p>
   <div class="time" id="time">--:--</div>
-  <button class="btn main" id="copy" type="button">Copy the challenge</button>
+  <a class="btn main" id="open" href="#">Race in OpenRide</a>
+  <button class="btn quiet" id="copy" type="button">Copy the challenge</button>
   <ol>
     <li>Install OpenRide (free, Android) if you don't have it.</li>
-    <li>Open it and paste the challenge into <b>Race a friend</b> on the home screen.</li>
+    <li>Tap <b>Race in OpenRide</b>. On older versions, copy the challenge and paste it into <b>Race a friend</b>.</li>
     <li>Race their ghost. It swims, rides or runs right beside you.</li>
   </ol>
   <a class="btn quiet" href="./">Get OpenRide</a>
@@ -58,9 +59,11 @@
     document.getElementById('what').textContent = `${NAME[p.s] ?? ''} ${distance} on ${p.r}`;
     document.getElementById('time').textContent = clock(p.t);
     document.title = `${p.n || 'A friend'} challenged you · OpenRide`;
+    document.getElementById('open').href = `openride://race#c=${token}`;
   } catch {
     document.getElementById('what').textContent = 'This link looks incomplete. Ask your friend to send it again.';
     document.getElementById('copy').hidden = true;
+    document.getElementById('open').hidden = true;
   }
   document.getElementById('copy').onclick = async () => {
     try {
