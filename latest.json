@@ -1,5 +1,5 @@
 {
-  "version": "1.27.1",
-  "apk": "https://github.com/csgreen3/openride/releases/download/v1.27.1/openride-1.27.1.apk",
-  "notes": "A new app icon and splash screen, and Android 16 support."
+  "version": "1.28.0",
+  "apk": "https://github.com/csgreen3/kesvo/releases/download/v1.28.0/kesvo-1.28.0.apk",
+  "notes": "OpenRide is now Kesvo. First do Settings → Back up. Then install Kesvo, open it, Settings → Restore, and delete OpenRide."
 }
